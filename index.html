@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>P-Ticket</title>
+    <link rel="icon" type="image/png" href="images/bus-icon.png" />
+    <!-- daisy ui & tailwind css -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/bb1c9e4dc3.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- custom css -->
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <body>
+    <header class="lg:relative px-2 lg:container lg:mx-auto lg:px-4">
+      <!-- navbar -->
+      <nav class="mt-12 mb-12">
+        <div class="navbar bg-base-100">
+          <div class="navbar-start">
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 font-poppins text-base"
+              >
+                <li class="text-red-600"><a>Home</a></li>
+                <li><a>About </a></li>
+                <li><a>Page </a></li>
+                <li><a>Destination </a></li>
+                <li><a>Search</a></li>
+              </ul>
+            </div>
+            <h1 class="sm:text-2xl font-extrabold lg:text-4xl">P-Ticket</h1>
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal gap-11 px-1 text-base font-normal">
+              <li class="text-red-600 font-bold"><a>Home</a></li>
+              <li><a>About </a></li>
+              <li><a>Page </a></li>
+              <li><a>Destination </a></li>
+              <li><a>Search</a></li>
+            </ul>
+          </div>
+          <div class="navbar-end">
+            <a
+              class="btn sm:px-4 bg-[#1DD1001A] text-[#1DD100] font-poppins ml-6 lg:px-6"
+              >Bus <img src="images/bus-icon.png" alt=""
+            /></a>
+          </div>
+        </div>
+      </nav>
+      <!-- banner -->
+      <section
+        class="lg:relative px-2 lg:container lg:mx-auto lg:px-4 items-center"
+      >
+        <div
+          class="card lg:h-[580px] mt-6 lg:w-full bg-base-100 shadow-xl image-full text-center"
+        >
+          <figure class="w-full">
+            <img class="w-full" src="images/banner.png" alt="Shoes" />
+          </figure>
+          <div class="card-body">
+            <h2
+              class="card-title lg:mt-10 railway text-white text-xl lg:text-6xl font-extrabold text-center"
+            >
+              End-to-End Travel with
+
+              <span class="text-[#1DD100]">P Paribahan</span>
+            </h2>
+            <p
+              class="text-sm lg:text-base font-medium inter text-white lg:w-2/5 mt-2 text-center"
+            >
+              Yes, you can run unit tests and view the results directly within
+              the app. The integrated testing features allow for a streamlined .
+            </p>
+            <div class="justify-start lg:mb-40">
+              <button
+                class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg inter bg-[#1DD100] text-xl text-black border-none"
+              >
+                Buy Tickets
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+    <main>
+      <section>
+        <div>
+          <h1 class="text-4xl inter text-center text-black font-bold mt-28">
+            Best offers for you
+          </h1>
+        </div>
+        <!-- card section -->
+        <div>
+          <div class="w-96 bg-base-100 bg-[#FFBF0F] flex inter">
+            <div class="items-center text-center">
+              <h2 class="inter text-4xl font-bold">15% OFF</h2>
+              <p class="inter text-xl">on your next purchase</p>
+              <p class="text-lg">use by January 2024</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>
