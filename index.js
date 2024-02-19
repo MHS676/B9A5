@@ -2,52 +2,57 @@ let titleCount = 1;
 let totalPrice = 0;
 const seatPrice = 550;
 const totalSeat = 40;
+let clickedCount = 0; 
 
 const seats = document.querySelectorAll(".a");
-
-
 
 for (let index = 0; index < seats.length; index++) {
     const seat = seats[index];
 
     seat.addEventListener("click", function() {
         if (clickedCount < 4) {
-            const title = seat.querySelector("p").innerText;
-            const titleSeatContainer = document.getElementById("seat-container");
-            const p = document.createElement("p");
-            p.innerText = title;
-            titleSeatContainer.appendChild(p);
+            
+            seat.removeEventListener("click", arguments.callee);
 
+            const tailwindClass = 'seat-container flex justify-between my-6 text-gray-500'
+            const seatPush = seat.innerText;
+            const pClass = 'text-ticket-heading-color font-semibold text-opacity-60'
+            const div = document.createElement('div');
+                    div.innerHTML = `
+                    <div class="${tailwindClass}">
+                    <p class="${pClass}">${seatPush}</p>
+                    <p class="${pClass}">Economy</p>
+                    <p class="${pClass}">${seatPrice}</p>
+                    
+                </div>
+                    `;
+                    const seatDetailsContainer = document.getElementById('div-seat');
+                    seatDetailsContainer.appendChild(div);
+            
             totalPrice += seatPrice;
             document.getElementById("totalPrice").innerText = totalPrice.toFixed(2);
             
+            
+
             seat.style.backgroundColor = "#1DD100";
             
             clickedCount++;
             document.getElementById("seat").innerText = clickedCount;
             const restOfSeat = totalSeat - clickedCount;
             document.getElementById("rest-seat").innerText = restOfSeat;
-            if (clickedCount === 4) {
-                // Remove event listeners from all seats
-                for (let i = 0; i < seats.length; i++) {
-                    seats[i].removeEventListener("click", handleClick);
-                }
-            }
+
+            
+            
         }
     });
 }
 
 
-let clickedCount = 0; 
+
 
 function handleClick() {
     // Your event handler logic goes here
 }
-
-
-
-
-
 
 
 
