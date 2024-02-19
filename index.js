@@ -1,42 +1,54 @@
 let titleCount = 1;
 let totalPrice = 0;
-const seatPrice = 550; 
+const seatPrice = 550;
+const totalSeat = 40;
 
 const seats = document.querySelectorAll(".a");
 
-let clickedCount = 0; // Variable to keep track of the number of buttons clicked
+
 
 for (let index = 0; index < seats.length; index++) {
     const seat = seats[index];
 
     seat.addEventListener("click", function() {
-        if (clickedCount < 4) { // Check if the limit of 4 buttons has not been reached
+        if (clickedCount < 4) {
             const title = seat.querySelector("p").innerText;
             const titleSeatContainer = document.getElementById("seat-container");
             const p = document.createElement("p");
             p.innerText = title;
             titleSeatContainer.appendChild(p);
 
-            // Update totalPrice and any other variables accordingly
-            titleCount++;
+            totalPrice += seatPrice;
             document.getElementById("totalPrice").innerText = totalPrice.toFixed(2);
-
-            // Change the color of the button to red
+            
             seat.style.backgroundColor = "#1DD100";
-
-            // Increment the clicked count
+            
             clickedCount++;
-
-            // Disable further clicks if the limit has been reached
+            document.getElementById("seat").innerText = clickedCount;
+            const restOfSeat = totalSeat - clickedCount;
+            document.getElementById("rest-seat").innerText = restOfSeat;
             if (clickedCount === 4) {
-                // Remove event listener from all seats
+                // Remove event listeners from all seats
                 for (let i = 0; i < seats.length; i++) {
-                    seats[i].removeEventListener("click", clickHandler);
+                    seats[i].removeEventListener("click", handleClick);
                 }
             }
         }
     });
 }
+
+
+let clickedCount = 0; 
+
+function handleClick() {
+    // Your event handler logic goes here
+}
+
+
+
+
+
+
 
 
 
@@ -72,6 +84,7 @@ btn.addEventListener("click", function() {
         alert("Please add a seat");
     }
 });
+
 
 
 
