@@ -95,22 +95,30 @@ function onlyNumbers(event) {
     event.preventDefault();
 }
 
-// function checkInputs() {
-//     const input1Value = document.getElementById('input1').value.trim();
-//     const input2Value = document.getElementById('input2').value.trim();
-//     const input3Value = document.getElementById('input3').value.trim();
-//     const submitBtn = document.getElementById('submitBtn');
+function checkInputs() {
+    const input1Value = document.getElementById('input1').value.trim();
+    const input2Value = document.getElementById('input2').value.trim();
+    const input3Value = document.getElementById('input3').value.trim();
+    const submitBtn = document.getElementById('submitBtn');
 
-//     if (input1Value !== '' && input2Value !== '' && input3Value !== '') {
-//         submitBtn.disabled = false;
-//         submitBtn.style.backgroundColor = '#1DD100'; // Change button color
-//     } else {
-//         submitBtn.disabled = true;
-//         submitBtn.style.backgroundColor = ''; // Reset button color
-//     }
-// }
-
-
+    if (input1Value !== '' && input2Value !== '' && input3Value !== '') {
+        submitBtn.disabled = false;
+        submitBtn.style.backgroundColor = '#1DD100'; // Change button color
+    } else {
+        submitBtn.disabled = true;
+        submitBtn.style.backgroundColor = ''; // Reset button color
+    }
+}
 
 
+
+
+
+
+function play(){
+    
+    const homeSection = document.getElementById('hidden-btn');
+    homeSection.classList.add('hidden');
+
+}
 

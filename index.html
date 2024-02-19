@@ -614,11 +614,7 @@
                     <p>Price</p>
                   </div>
                   <hr class="border-dashed border-b-2 mb-2" />
-                  <!-- <div id="div-seat-container"  class="seat-container flex justify-between my-6 text-gray-500">
-                <p id="seat-container" ></p>
-                <p id="seat-container">Economy</p>
-                <p id="tickets-price">550</p>
-              </div> -->
+
                   <div id="div-seat"></div>
                   <hr class="border-dashed border-b-2 mb-2" />
                   <div class="flex justify-between my-6">
@@ -627,6 +623,7 @@
                     <p>BDT <span id="totalPrice">0</span></p>
                   </div>
                   <div
+                    id="hidden-btn"
                     class="flex items-center border border-gray-300 rounded-lg p-2"
                   >
                     <input
@@ -698,6 +695,7 @@
                   class="btn px-72 h-16 mt-3 justify-center ml-12 rounded-lg"
                   onclick="my_modal_4.showModal()"
                   id="submitBtn"
+                  disabled
                 >
                   Next
                 </button>
@@ -705,8 +703,12 @@
                   <div class="modal-box w-11/12 max-w-5xl">
                     <div class="modal-action">
                       <div>
-                        <div class="w-full text-center">
-                          <img src="images/success.png" alt="" />
+                        <div class="text-center mb-5">
+                          <img
+                            class="mx-auto"
+                            src="images/success.png"
+                            alt=""
+                          />
                         </div>
                         <h1 class="text-center font-semibold text-2xl mb-5">
                           SUCCESS
