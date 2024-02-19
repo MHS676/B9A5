@@ -11,9 +11,9 @@ for (let index = 0; index < seats.length; index++) {
 
     seat.addEventListener("click", function() {
         if (clickedCount < 4) {
-            
+            //you can't selected this button again
             seat.removeEventListener("click", arguments.callee);
-
+            // HTML & cSS push
             const tailwindClass = 'seat-container flex justify-between my-6 text-gray-500'
             const seatPush = seat.innerText;
             const pClass = 'text-ticket-heading-color font-semibold text-opacity-60'
@@ -33,7 +33,7 @@ for (let index = 0; index < seats.length; index++) {
             document.getElementById("totalPrice").innerText = totalPrice.toFixed(2);
             
             
-
+            //set the color
             seat.style.backgroundColor = "#1DD100";
             
             clickedCount++;
@@ -48,16 +48,7 @@ for (let index = 0; index < seats.length; index++) {
 }
 
 
-
-
-function handleClick() {
-    // Your event handler logic goes here
-}
-
-
-
-
-
+// right coupon added
 const btn = document.getElementById("apply-btn");
 
 btn.addEventListener("click", function() {
@@ -90,6 +81,34 @@ btn.addEventListener("click", function() {
     }
 });
 
+
+
+function onlyNumbers(event) {
+    const key = event.key;
+    const inputValue = event.target.value;
+
+    if (key >= "0" && key <= "9") {
+        if (inputValue.length < 11) {
+            return;
+        }
+    }
+    event.preventDefault();
+}
+
+// function checkInputs() {
+//     const input1Value = document.getElementById('input1').value.trim();
+//     const input2Value = document.getElementById('input2').value.trim();
+//     const input3Value = document.getElementById('input3').value.trim();
+//     const submitBtn = document.getElementById('submitBtn');
+
+//     if (input1Value !== '' && input2Value !== '' && input3Value !== '') {
+//         submitBtn.disabled = false;
+//         submitBtn.style.backgroundColor = '#1DD100'; // Change button color
+//     } else {
+//         submitBtn.disabled = true;
+//         submitBtn.style.backgroundColor = ''; // Reset button color
+//     }
+// }
 
 
 
